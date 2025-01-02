@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>象山 - 桂林山水</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar">
+        <div class="container">
+            <h1>桂林山水</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="lijiang.html">漓江</a></li>
+                    <li><a href="xiangshan.html">象山</a></li>
+                    <li><a href="wangcheng.html">王城</a></li>
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 象山内容 -->
+    <section id="landscape">
+        <h2>象山风光</h2>
+        <div class="image-gallery">
+            <img src="images/象山01.png" alt="象山" class="image-large">
+            <img src="images/象山02.png" alt="象山" class="image-large">
+        </div>
+        <p>象山是桂林的象征之一，因山形似大象而得名。象山坐落在漓江东岸，山体孤立，是自然的鬼斧神工。</p>
+        <p>据说，象山的象形岩经过千百年的侵蚀与风化，成了桂林山水的象征之一，是游客们最喜爱的摄影景点。</p>
+        <!-- 新增的视频区域 -->
+        <div class="video-container">
+            <video controls>
+                <video id="myVideo" width="100%" height="100%" autoplay muted></video>
+                <source src="video/桂林象山.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+        </div>
+    </section>
+
+    <!-- 底边栏 -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 22060124 莫鑫阳 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        const video = document.getElementById('myVideo');
+    
+        // 在鼠标进入时显示控件
+        video.addEventListener('mouseenter', () => {
+            video.setAttribute('controls', ''); // 启用视频控件
+        });
+    
+        // 在鼠标移开时隐藏控件
+        video.addEventListener('mouseleave', () => {
+            video.removeAttribute('controls'); // 移除视频控件
+        });
+    </script>
+</body>
+</html>
